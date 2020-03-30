@@ -20,7 +20,7 @@ In de praktijk biedt een webservice gewoonlijk een objectgeoriënteerde webgebas
 **Asynchrone JavaScript en XML**
 Asynchrone JavaScript en XML (AJAX) is een dominante technologie voor webservices. Ontwikkeld vanuit de combinatie van HTTP-servers, JavaScript-clients en gewone oude XML (in tegenstelling tot SOAP en W3C-webservices), wordt het nu vaak gebruikt met JSON en, of in plaats van, XML.
 
-**Rest**
+### **Rest**
 Representational State Transfer (REST) is een architectuur voor goed opgevoede webservices die op internet kunnen functioneren.  
   
 In een document uit 2004 stelt de W3C de volgende REST als een belangrijk onderscheidend kenmerk van webservices:  
@@ -30,14 +30,14 @@ We kunnen twee grote klassen van webservices onderscheiden:
 - willekeurige webservices, waarin de service een willekeurige set bewerkingen kan weergeven.  
 -- W3C, Web Services Architecture
 
- **Webservices die opmaaktalen gebruiken**
+### **Webservices die opmaaktalen gebruiken**
  W3C
 Web Services Flow Language (WSFL), vervangen door BPEL
 Websjabloon
 WS-MetadataExchange
 XML-interface voor netwerkdiensten (XINS), biedt een POX-achtige webservice-specificatie-indeling
 
-**Web API**
+### **Web API**
 Een web-API is een ontwikkeling in webservices waarbij de nadruk is verschoven naar eenvoudiger communicatie met representatieve toestandsoverdracht (REST). Restful API's hebben geen op XML gebaseerde webserviceprotocollen (SOAP en WSDL) nodig om hun interfaces te ondersteunen.
 
 ## **W3C Web serivces**
@@ -47,7 +47,7 @@ Een webservice is een softwaresysteem dat is ontworpen om interoperabele machine
 
 W3C Web Services maakt mogelijk gebruik van SOAP over HTTP-protocol, waardoor minder dure (efficiëntere) interacties via internet mogelijk zijn dan via eigen oplossingen zoals EDI / B2B. Naast SOAP over HTTP kunnen webservices ook worden geïmplementeerd op andere betrouwbare transportmechanismen zoals FTP. In een document uit 2002 definieerde de Web Services Architecture Working Group een webservicesarchitectuur, waarvoor een gestandaardiseerde implementatie van een "webservice" nodig was.
 
-**Uitleg**
+### **Uitleg**
 De term "webservice" beschrijft een gestandaardiseerde manier om webtoepassingen te integreren met behulp van de open standaarden XML, SOAP, WSDL en UDDI via een Internet Protocol-backbone. XML is het gegevensformaat dat wordt gebruikt om de gegevens te bevatten en er metagegevens om te verstrekken, SOAP wordt gebruikt om de gegevens over te dragen, WSDL wordt gebruikt voor het beschrijven van de beschikbare services en UDDI geeft aan welke services beschikbaar zijn.
 
 Een webservice is een communicatiemethode tussen twee elektronische apparaten via een netwerk. Het is een softwarefunctie die wordt aangeboden op een netwerkadres via het web met de service altijd ingeschakeld, zoals in het concept van utility computing.
@@ -66,25 +66,26 @@ Al deze regels voor communicatie zijn gedefinieerd in een bestand met de naam WS
 
 Een directory genaamd UDDI (Universal Description, Discovery, and Integration) definieert met welk softwaresysteem contact moet worden opgenomen voor welk type gegevens. Dus wanneer een softwaresysteem een ​​bepaald rapport / gegevens nodig heeft, gaat het naar de UDDI en zoekt uit met welke andere systemen het contact kan opnemen om die gegevens te ontvangen. Zodra het softwaresysteem erachter komt met welke andere systemen het contact moet opnemen, neemt het vervolgens contact op met dat systeem via een speciaal protocol genaamd SOAP (Simple Object Access Protocol). Het serviceprovidersysteem valideert eerst het gegevensverzoek door te verwijzen naar het WSDL-bestand, en verwerkt vervolgens het verzoek en verzendt de gegevens volgens het SOAP-protocol.
 
-**Geautomatiseerde ontwerpmethoden**
+### **Geautomatiseerde ontwerpmethoden**
 Geautomatiseerde tools kunnen helpen bij het creëren van een webservice. Voor services die WSDL gebruiken, is het mogelijk om ofwel automatisch WSDL te genereren voor bestaande klassen (een bottom-up model) of om een ​​klassenskelet te genereren op basis van bestaande WSDL (een top-down model).
 
 Een ontwikkelaar die een bottom-up model gebruikt, schrijft eerst implementatieklassen (in een programmeertaal) en gebruikt vervolgens een WSDL-generatietool om methoden van deze klassen als een webservice bloot te leggen. Dit is eenvoudiger te ontwikkelen, maar kan moeilijker te handhaven zijn als de oorspronkelijke klassen regelmatig worden gewijzigd.
 Een ontwikkelaar die een top-down model gebruikt, schrijft eerst het WSDL-document en gebruikt vervolgens een codegeneratie-tool om het klassenskelet te produceren, dat indien nodig moet worden voltooid. Dit model wordt over het algemeen als moeilijker beschouwd, maar kan schonere ontwerpen opleveren en is over het algemeen beter bestand tegen verandering. Zolang de berichtformaten tussen afzender en ontvanger niet veranderen, hebben wijzigingen in de afzender en ontvanger zelf geen invloed op de webservice. De techniek wordt ook eerst contract genoemd omdat de WSDL (of contract tussen afzender en ontvanger) het uitgangspunt is.
 Een ontwikkelaar die een subset-WSDL (SWSDL)  gebruikt (d.w.z. een WSDL met de subset-bewerking in de oorspronkelijke WSDL) kan testen van webservices en ontwikkeling van bovenaf uitvoeren.
 
-**Criticism**
+### **Criticism**
 Critici van niet-RESTful webservices klagen vaak dat ze te complex zijn en gebaseerd zijn op grote softwareleveranciers of integrators, in plaats van op typische open source-implementaties.
 
 Er zijn ook zorgen over de prestaties als gevolg van het gebruik van XML door de webservices als berichtformaat en SOAP / HTTP bij het omhullen en transporteren.
 
-**Regressietesten van webservices**
+### **Regressietesten van webservices**
 Functioneel en niet-functioneel testen van webservices wordt gedaan met behulp van WSDL-parsering. Regressietests worden uitgevoerd door de wijzigingen te identificeren die zijn aangebracht om software te upgraden. De behoeften aan regressietests voor webservices kunnen op drie verschillende manieren worden gecategoriseerd, namelijk wijzigingen in WSDL, wijzigingen in de code en selectief opnieuw testen van bewerkingen. We kunnen de bovenstaande drie behoeften vastleggen in drie tussenliggende vormen van Subset WSDL, namelijk Difference WSDL (DWSDL), Unit WSDL (UWSDL) en Reduced WSDL (RWSDL), respectievelijk. Deze drie subset-WSDL's worden vervolgens gecombineerd tot gecombineerde WSDL (CWSDL) die verder wordt gebruikt voor regressietests van de webservice. Dit zal helpen bij Automated Web Service Change Management (AWSCM) door de selectie van de relevante testcases uit te voeren om een ​​gereduceerde testsuite op te bouwen uit de oude testsuite.
 
 Het testen van webservices kan ook worden geautomatiseerd met behulp van verschillende testautomatiseringstools zoals SOAP UI, Oracle Application Testing Suite (OATS), Unified Functional Testing, Selenium, etc.
 
-**Beheer van webserviceveranderingen**
+### **Beheer van webserviceveranderingen**
 Werkgerelateerd aan het vastleggen en visualiseren van wijzigingen die zijn aangebracht in een webservice. Visualisatie en berekening van veranderingen kunnen worden gedaan in de vorm van tussenliggende artefacten (Subset WSDL). Het inzicht in de berekening van de impact van veranderingen is nuttig bij testen, top-down ontwikkeling en het verminderen van regressietests. AWSCM is een tool die subsetbewerkingen in een WSDL-bestand kan identificeren om een subset WSDL te construeren.
 
+### **Bronnen**
 Wikipedia contributors. (2020, 26 maart). Web service. Geraadpleegd van https://en.wikipedia.org/wiki/Web_service
 
