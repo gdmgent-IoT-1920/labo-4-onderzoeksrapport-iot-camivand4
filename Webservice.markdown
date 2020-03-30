@@ -16,7 +16,7 @@ webservice heeft 2 betekenissen, ofwel:
 ## **Praktijk**
 In de praktijk biedt een webservice gewoonlijk een objectgeoriënteerde webgebaseerde interface aan een databaseserver, bijvoorbeeld gebruikt door een andere webserver of door een mobiele app, die een gebruikersinterface biedt aan de eindgebruiker. Veel organisaties die gegevens leveren in opgemaakte HTML-pagina's, zullen die gegevens ook op hun server leveren als XML of JSON, vaak via een webservice om syndicatie mogelijk te maken, bijvoorbeeld Wikipedia's Export. Een andere applicatie die aan de eindgebruiker wordt aangeboden, kan een mashup zijn, waarbij een webserver meerdere webservices op verschillende machines gebruikt en de inhoud in één gebruikersinterface compileert.
 
-## **Generic webservices**
+## **Algemene webservices**
 **Asynchrone JavaScript en XML**
 Asynchrone JavaScript en XML (AJAX) is een dominante technologie voor webservices. Ontwikkeld vanuit de combinatie van HTTP-servers, JavaScript-clients en gewone oude XML (in tegenstelling tot SOAP en W3C-webservices), wordt het nu vaak gebruikt met JSON en, of in plaats van, XML.
 
